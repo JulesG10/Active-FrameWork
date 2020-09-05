@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p>az</p>
+    <script defer type="module" src="../app.active.js"></script>
+    <script defer type="module">
+        import { _,Active } from "../app.active.js";
+        
+        _.init(
+        // manualy import json (boolean)
+        false,
+        // object for manual (object)
+        false
+        )
+        .then((_) => {// after load file or json
+            _.$("p").self() // return array of all P element
+            _.add$("say_hello",()=>{   // add function ==>  _.$(<el>).your_function_name
+                alert('Hello')
+            }) 
+            _.$('p').say_hello() // use your function 
+            _.$('p').toActive() // return object for use it in Active element
+        }).catch(err=>{throw err}) // file or json error
+    </script>
+</body>
+</html>
