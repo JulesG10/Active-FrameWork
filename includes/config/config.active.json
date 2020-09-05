@@ -1,0 +1,41 @@
+[
+    {
+        "tag": "div",
+        "id": null,
+        "className": "test",
+        "html": [
+            {
+                "tag":"div",
+                "html":[
+                    {
+                        "tag":"div",
+                        "html":[
+                            {
+                                "tag":"div"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "shadow": [],
+        "attributes": [],
+        "event": [],
+        "css": [],
+        "stylesheet": null,
+        "text": null
+    },
+    {
+        "tag": null,
+        "id": null,
+        "className": null,
+        "html": [],
+        "shadow": [],
+        "attributes": [],
+        "event": [],
+        "css": [],
+        "stylesheet": null,
+        "text": null
+    }
+
+]
