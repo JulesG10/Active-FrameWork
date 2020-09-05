@@ -7,7 +7,7 @@ export class _$ {
     el = ""
     constructor(el = "div") {
         this.el = el;
-        if (document.querySelector(this.el) instanceof HTMLElement) {
+        if (document.querySelector(this.el)&&document.querySelector(this.el) instanceof HTMLElement) {
             this.el = document.querySelectorAll(this.el);
         } else if (document.createElement(this.el) instanceof HTMLElement) {
             this.el = [document.createElement(this.el)];
@@ -123,12 +123,22 @@ export class _$ {
         }
         return this;
     }
-    append(parent, id = null) {
+    to(parent, id = null) {
         if (id) {
             parent.appendChild(this.el[id]);
         } else {
             this.each((e) => {
                 parent.appendChild(e)
+            })
+        }
+        return this;
+    }
+    append(child,id=null){
+        if(id){
+            this.el[id].appendChild(child)
+        }else{
+            this.each((e) => {
+                e.appendChild(child)
             })
         }
         return this;
