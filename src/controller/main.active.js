@@ -1,25 +1,46 @@
-import { ActiveDocument } from "../class/main.active.js";
+import { ReadFile } from "./ajax.active.js";
+import { UrlToBlob } from "../utils/utils.active.js";
 
 /**
+ * @var config
  * @public
- * @function
- * @name ActiveText
- * @param {Object} obj
+ * @type {Object}
  */
-export function ActiveText(obj,fonts) {
-    let object = {
-      tag: "p",
-      css: [{ fontFamily: "Arial, sans-serif" }, { color: "#383838" }],
-    };
-    Object.keys(obj).map((ob) => {
-      object[ob] = obj[ob];
-    });
-    const _active = new ActiveDocument(object);
-    let element = null;
-    return _active.getElement();
+export var config = null;
+
+/**
+ * @function
+ * @public
+ * @name loadJSONconfig
+ * @returns {Promise}
+ */
+export function loadJSONconfig() {
+    return new Promise((res, rej) => {
+        UrlToBlob("../includes/config/config.active.json", "config", false)
+            .then(u => {
+                ReadFile(u).then(txt => {
+                    try{
+                        res(JSON.parse(txt))
+                    }catch{
+                        rej("You must put json content into the config file !");
+                    }
+                    if(!config) config=JSON.parse(txt);
+                })
+            })
+    })
 }
 
-export var components = {
-  ActiveText:ActiveText,
+/**
+ * @function
+ * @public
+ * @name loadJSONconfig
+ * @param {Object} json
+ * @returns {Promise}
+ */
+export function manualJSONconfig(json){
+    if(!config) config=JSON.parse(json);
 }
+
+
+
 
