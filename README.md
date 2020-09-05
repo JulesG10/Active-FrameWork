@@ -56,7 +56,7 @@ Go  includes/config/config.active.json and change has you want for genarate your
 ```
 > Manual config file
 
-go  file example/ex04.html
+go  file [example/ex04.html](https://github.com/JulesG10/Active-FrameWork/blob/master/example/ex04.html)
 
 > Init active
 
