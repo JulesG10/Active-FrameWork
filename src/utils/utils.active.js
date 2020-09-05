@@ -59,13 +59,13 @@ export var Entries = Object.entries;
  */
 export function live(obj,setE){
   let handler = {
-    get(target, prop, receiver){
-      if (typeof target[key] === 'object' && target[key] !== null) {
-        return new Proxy(target[key],handler)
-      } else {
-        return target[key];
-      }
-    },
+//     get(target, prop, receiver){
+//       if (typeof target[key] === 'object' && target[key] !== null) {
+//         return new Proxy(target[key],handler)
+//       } else {
+//         return target[key];
+//       }
+//     },
     set(obj, prop, value){
         setE(obj, prop, value)
         return true;
