@@ -4,6 +4,12 @@ import { css } from "./src/function/css.active.js";
 import { live } from "./src/utils/utils.active.js";
 import { Active as Act,ActiveToDocument } from "./src/function/main.active.js";
 
+/**
+ * @var _
+ * @public
+ * @name _
+ * @type {Object}
+ */
 export var _ = ({
     /**
      * @function
@@ -91,6 +97,28 @@ export var _ = ({
      */
     addActive:(obj)=>{
         ActiveToDocument([Act(obj)])
+    },
+    /**
+     * @function
+     * @public
+     * @name addComponent
+     * @param {String} name
+     * @param {Function} action
+     * @returns {void}
+     */
+    addComponent:(name,action)=>{
+        components[name] = action;
+    },
+    /**
+     * @function
+     * @public
+     * @name addComponent
+     * @param {String} name
+     * @param {Function} action
+     * @returns {void}
+     */
+    addCss:(name,action)=>{
+        css[name] = action;
     }
 });
 
