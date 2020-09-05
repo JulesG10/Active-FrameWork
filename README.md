@@ -9,7 +9,7 @@ git clone  https://github.com/JulesG10/Active-FrameWork.git
 
 > Change the config file
 
-Go  includes/config/config.active.json and change has you want for genarate your page
+Go  [includes/config/config.active.json](https://github.com/JulesG10/Active-FrameWork/blob/master/includes/config/config.active.json) and change has you want for genarate your page
 
 ```json
 [
