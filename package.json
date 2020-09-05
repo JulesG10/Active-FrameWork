@@ -1,0 +1,17 @@
+{
+  "name": "active",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.active.js",
+  "directories": {
+    "lib": "lib",
+    "src":"src",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"start test/index.html"
+  },
+  "author": "Jules Garcia",
+  "license": "MIT"
+}
