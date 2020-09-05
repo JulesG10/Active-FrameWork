@@ -38,7 +38,13 @@ export function loadJSONconfig() {
  * @returns {Promise}
  */
 export function manualJSONconfig(json){
-    if(!config) config=JSON.parse(json);
+    if(!config) {
+        if(typeof config == "string"){
+            config=JSON.parse(json);
+        }else{
+            config=json;
+        } 
+    }
 }
 
 
