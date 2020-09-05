@@ -6,7 +6,7 @@ import { ActiveDocument } from "../class/main.active.js";
  * @name ActiveText
  * @param {Object} obj
  */
-export function ActiveText(obj,fonts) {
+export function ActiveText(obj) {
     let object = {
       tag: "p",
       css: [{ fontFamily: "Arial, sans-serif" }, { color: "#383838" }],
@@ -18,7 +18,12 @@ export function ActiveText(obj,fonts) {
     let element = null;
     return _active.getElement();
 }
-
+/**
+ * @var components
+ * @public
+ * @name components
+ * @type {Object}
+ */
 export var components = {
   ActiveText:ActiveText,
 }
