@@ -9,7 +9,7 @@ git clone  https://github.com/JulesG10/Active-FrameWork.git
 
 > Change the config file
 
-Go  [includes/config/config.active.json](https://github.com/JulesG10/Active-FrameWork/blob/master/includes/config/config.active.json) and change has you want for generate your page
+Go  includes/config/config.active.json and change has you want for genarate your page
 
 ```json
 [
@@ -56,7 +56,7 @@ Go  [includes/config/config.active.json](https://github.com/JulesG10/Active-Fram
 ```
 > Manual config file
 
-go  file [example/ex04.html](https://github.com/JulesG10/Active-FrameWork/blob/master/example/ex04.html)
+go  file example/ex04.html
 
 > Init active
 
@@ -72,6 +72,10 @@ go  file [example/ex04.html](https://github.com/JulesG10/Active-FrameWork/blob/m
         })
         .catch(err=>{throw err})
  </script>
+```
+> Init only with script tag
+```html
+<script type="module" defer src="./auto.active.js"></script>
 ```
 
 ## Contributing
