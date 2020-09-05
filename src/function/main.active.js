@@ -104,7 +104,7 @@ export function ActiveToDocument(obj = []) {
     });
   } else {
     document
-      .getElementsByTagName("html")
+      .getElementsByTagName("html")[0]
       .appendChild(document.createElement("body"));
     Object.keys(obj).map((ob) => {
       document.body.appendChild(obj[ob]);
