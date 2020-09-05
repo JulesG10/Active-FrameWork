@@ -73,7 +73,7 @@ go  file example/ex04.html
         .catch(err=>{throw err})
  </script>
 ```
-> Init only with script tag
+> or Init only with script tag
 ```html
 <script type="module" defer src="./auto.active.js"></script>
 ```
