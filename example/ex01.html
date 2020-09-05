@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Example 01</title>
 </head>
 <body>
-    <p></p>
-    <p>az</p>
     <script defer type="module" src="../app.active.js"></script>
     <script defer type="module">
-        import { _ } from "../app.active.js";
-        _.init(true,false).then((_) => {
-           console.log(_)
-        })
+        import { _,Active } from "../app.active.js";
+        
+        _.init(
+        // manualy import json (boolean)
+        false,
+        // object for manual (object)
+        false
+        )
+        .then((_) => {// after load file or json
+            console.log(_);
+            let obj={
+                tag:"div",
+                id:"example",
+                text:"coucou"
+            };
+            obj=_.live(obj,(obj, prop, value)=>{ // info if object change
+                if(prop == "text"){
+                    _.$("#example").text(value); // change element value
+                }
+            })
+            _.$("body").append(Active(obj),0) // append Active element to body
+
+            setTimeout(()=>{
+                obj.text = "change" // change obj.text value after 2 second
+            },2000)
+        }).catch(err=>{throw err}) // file or json error
     </script>
 </body>
 </html>
