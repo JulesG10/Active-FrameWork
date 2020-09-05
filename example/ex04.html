@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p>az</p>
+    <script defer type="module" src="../app.active.js"></script>
+    <script defer type="module">
+        import { _ } from "../app.active.js";
+        
+        _.init(
+        // manualy import json (boolean)
+        true,
+        // object for manual (object)
+       [
+           {
+               tag:'ok' // create custom element call "ok"
+           }
+       ]
+        )
+        .then((_) => {// after load file or json
+          _.$("body").append(_.components.ActiveText({text:"coucou"})) // apppend active components to body
+        }).catch(err=>{throw err}) // file or json error
+    </script>
+</body>
+</html>
