@@ -80,6 +80,7 @@ go  file example/ex04.html
 
 ## Contributing
 
+- add a bundler as webpack for production mode
 - add more active components [here](https://github.com/JulesG10/Active-FrameWork/blob/master/src/components/main.active.js)
 - add more _$ function [here](https://github.com/JulesG10/Active-FrameWork/blob/master/src/class/fast.active.js)
 - make obersever better [here](https://github.com/JulesG10/Active-FrameWork/blob/master/src/class/observer.active.js)
